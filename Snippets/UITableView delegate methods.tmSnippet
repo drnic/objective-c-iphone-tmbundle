@@ -80,6 +80,28 @@
 	return YES;
 }
  */ 
+
+/*
+ Override if you want a section index on RHS of screen
+ Also see tableView:sectionIndexTitlesForTableView:
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+  /*
+  Return the index titles for each of the sections (e.g. "A", "B", "C"...).
+  Use key-value coding to get the value for the key @"letter" in each of the dictionaries in list.
+   */
+  return [displayList valueForKey:@"letter"];
+}
+ */
+
+/*
+ Override if you want a section index on RHS of screen
+ Also see sectionIndexTitlesForTableView:
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+	// Return the index for the given section title
+	return [indexLetters indexOfObject:title];
+}
+ */
+
 </string>
 	<key>name</key>
 	<string>UITableView delegate methods</string>
