@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	// Only one section
+	return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // TODO [list count]
+	return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	static NSString *identifier = @"identifier";
+	
+	// Try to retrieve from the table view a now-unused cell with the given identifier
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	
+	// If no cell is available, create a new one using the given identifier
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:identifier] autorelease];
+	}
+	// Set up the cell
+	// TODO id arrayRow = [list objectAtIndex:[indexPath row]];
+	cell.text = "content";
+	return cell;
+}
+
+/*
+ To conform to Human Interface Guildelines, since selecting a row would have no effect (such as navigation), 
+ make sure that rows cannot be selected.
+ TODO - change as necessary
+ */
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	return nil;
+}
+
+/*
+ Override if you support editing the list
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+		
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		// Delete the row from the data source
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+	}	
+	if (editingStyle == UITableViewCellEditingStyleInsert) {
+		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+	}	
+}
+*/
+
+
+/*
+ Override if you support conditional editing of the list
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+	// Return NO if you do not want the specified item to be editable.
+	return YES;
+}
+*/
+
+
+/*
+ Override if you support rearranging the list
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+}
+*/
+
+
+/*
+ Override if you support conditional rearranging of the list
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+	// Return NO if you do not want the item to be re-orderable.
+	return YES;
+}
+ */ 
+</string>
+	<key>name</key>
+	<string>UITableView delegate methods</string>
+	<key>scope</key>
+	<string>meta.implementation.objc</string>
+	<key>tabTrigger</key>
+	<string>del</string>
+	<key>uuid</key>
+	<string>9E9DC06A-4CB6-45CB-8CD3-2273B907EAEC</string>
+</dict>
+</plist>
