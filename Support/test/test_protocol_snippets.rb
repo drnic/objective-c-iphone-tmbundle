@@ -77,7 +77,13 @@ class TestProtocolSnippets < Test::Unit::TestCase
 // – tableView:canMoveRowAtIndexPath:
 // – tableView:moveRowAtIndexPath:toIndexPath:
       OBJC
-      assert_equal(expected, ProtocolSnippet.for("UITableViewDataSource"))
+      assert_equal(expected, ProtocolSnippet.new("UITableViewDataSource").to_s)
+    end
+    
+    should "not work for unknown protocol" do
+      assert_raise(ProtocolSnippetNotSupported) do
+        ProtocolSnippet.new("XYZ")
+      end
     end
   end
 end

@@ -1,11 +1,14 @@
+class ProtocolSnippetNotSupported < Exception; end
+
 class ProtocolSnippet
   attr_reader :protocol_class
   
   def initialize(protocol_class)
     @protocol_class = protocol_class
+    raise ProtocolSnippetNotSupported, protocol_class unless supported?
   end
   
-  def self.supported?
+  def supported?
     available = %w[UITableViewDelegate UITableViewDataSource]
     available.include?(protocol_class)
   end
