@@ -18,7 +18,7 @@ class TestProtocolSnippets < Test::Unit::TestCase
   
 }
     OBJC
-    assert_equal(expected, ProtocolSnippet.new("UITableViewDelegate").to_s)
+    assert(ProtocolSnippet.new("UITableViewDelegate").to_s.index(expected))
   end
 
   should "generate UITableView data source protocol" do
@@ -36,7 +36,7 @@ class TestProtocolSnippets < Test::Unit::TestCase
   
 }
     OBJC
-    assert_equal(expected, ProtocolSnippet.new("UITableViewDataSource").to_s)
+    assert(ProtocolSnippet.new("UITableViewDataSource").to_s.index(expected))
   end
   
   should "not work for unknown protocol" do

@@ -19,7 +19,8 @@ class ProtocolSnippet
   
   def to_s
     header +
-    render_required_methods
+    render_required_methods + "\n" +
+    render_optional_methods + "\n"
   end
   
   def header
@@ -31,9 +32,9 @@ class ProtocolSnippet
   end
   
   def render_required_methods
-    protocol_definition[:required].inject([]) do |mem, required_method|
+    protocol_definition[:required].inject([]) do |mem, method|
       mem << <<-OBJC
-#{required_method}
+#{method}
 {
   #{"$0" if mem.size == 0}
 }
@@ -42,6 +43,18 @@ class ProtocolSnippet
     end.join("\n")
   end
   
+  def render_optional_methods
+    protocol_definition[:optional].inject([]) do |mem, method|
+      mem << <<-OBJC
+// #{method}
+// {
+//   
+// }
+      OBJC
+      mem
+    end.join("\n")
+  end
+
   def protocol_definition
     @protocol_definition ||= begin
       self.class.protocol_definitions[protocol_class]
