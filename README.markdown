@@ -1,10 +1,9 @@
+# TextMate bundle for Objective-C (iPhone)
 
-## Idea for finding protocol methods
+There already exists a huge bundle for Objective-C and another for developing outside of Xcode. But the Objective-C bundle is also the Cocoa bundle. With the iPhone SDK, it has a different suite of classes, protocols etc.
 
-In each docco page, I think the instance method signatures are all within `p.spaceabovemethod` elements.
+Ultimately this bundle will provide access to the iPhone SDK classes and protocols. Its in its infancy, and since the NDA hasn't been lifted you shouldn't be reading this I guess.
 
-Not sure yet about required vs optional - perhaps from the Tasks section?
+## Features
 
-    $('li.tooltip code a').html().replace('&nbsp;',' ')
-    
-Then get its next sibling (`<span class="task_api_suffix"> optional method</span>`) to check for optionalness
+* Protocol method stubs - never need remember what methods are required for your class to be a delegate of UITableView again, just select UITableViewDelegate and it spews out all the required and optional methods as ready-to-use stubs. (⌃⌥⌘P)
