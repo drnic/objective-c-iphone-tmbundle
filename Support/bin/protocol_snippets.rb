@@ -57,12 +57,8 @@ end
 
 if __FILE__ == $0
   require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
-  # TODO - useful alert + exit_discard if no hpricot
-  require "rubygems"
-  gem 'hpricot'
-  require "hpricot"
-  protocols = ProtocolSnippet.protocol_definitions
-  TextMate.exit_discard unless protocol_class = TextMate::UI.menu(protocols.map { |item| {"title" => item} })
+  protocols = ProtocolSnippet.protocol_definitions.sort { |a, b| a.first <=> b.first }
+  TextMate.exit_discard unless protocol_class = TextMate::UI.menu(protocols.map { |item| {"title" => item.first} })
   protocol_class = protocol_class["title"]
   puts ProtocolSnippet.new(protocol_class).to_s
 end
