@@ -1,3 +1,0 @@
-required:
-  - "- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar"
-  - "- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar"
