@@ -1,0 +1,265 @@
+--- 
+UIAlertViewDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIAlertViewDelegate_Protocol/UIAlertViewDelegate/UIAlertViewDelegate.html
+  :optional: 
+  - "- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex"
+  - "- (void)willPresentAlertView:(UIAlertView *)alertView"
+  - "- (void)didPresentAlertView:(UIAlertView *)alertView"
+  - "- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - "- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - "- (void)alertViewCancel:(UIAlertView *)alertView"
+  :name: UIAlertViewDelegate
+UIAccelerometerDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIAccelerometerDelegate_Protocol/UIAccelerometerDelegate/UIAccelerometerDelegate.html
+  :optional: 
+  - "- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration"
+  :name: UIAccelerometerDelegate
+UITabBarControllerDelegate: 
+  :required: 
+  - "- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController"
+  - "- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITabBarControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: UITabBarControllerDelegate
+UIApplicationDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url"
+  - "- (void)application:(UIApplication *)application  willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation  duration:(NSTimeInterval)duration"
+  - "- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation"
+  - "- (void)applicationWillResignActive:(UIApplication *)application"
+  - "- (void)applicationDidBecomeActive:(UIApplication *)application"
+  - "- (void)application:(UIApplication *)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame"
+  - "- (void)application:(UIApplication *)application didChangeStatusBarFrame:(CGRect)oldStatusBarFrame"
+  - "- (void)applicationDidFinishLaunching:(UIApplication *)application"
+  - "- (void)applicationWillTerminate:(UIApplication *)application"
+  - "- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application"
+  - "- (void)applicationSignificantTimeChange:(UIApplication *)application"
+  :name: UIApplicationDelegate
+UIPickerViewDataSource: 
+  :required: 
+  - "- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView"
+  - "- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Reference/UIPickerViewDataSource_Protocol/Introduction/Introduction.html
+  :optional: []
+
+  :name: UIPickerViewDataSource
+ABPeoplePickerNavigationControllerDelegate: 
+  :required: 
+  - "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person"
+  - "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier"
+  - "- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABPeoplePickerNavigationControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: ABPeoplePickerNavigationControllerDelegate
+UITextViewDelegate: 
+  :required: 
+  - "- (BOOL)textViewShouldEndEditing:(UITextView *)textView"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextViewDelegate_Protocol/Reference/UITextViewDelegate.html
+  :optional: 
+  - "- (BOOL)textViewShouldBeginEditing:(UITextView *)textView"
+  - "- (void)textViewDidBeginEditing:(UITextView *)textView"
+  - "- (void)textViewDidEndEditing:(UITextView *)textView"
+  - "- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text"
+  - "- (void)textViewDidChange:(UITextView *)textView"
+  - "- (void)textViewDidChangeSelection:(UITextView *)textView"
+  :name: UITextViewDelegate
+UIScrollViewDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIScrollViewDelegate_Protocol/Reference/UIScrollViewDelegate.html
+  :optional: 
+  - "- (void)scrollViewDidScroll:(UIScrollView *)scrollView"
+  - "- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView"
+  - "- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate"
+  - "- (BOOL)scrollViewWillScrollToTop:(UIScrollView *)scrollView"
+  - "- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView"
+  - "- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView"
+  - "- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView"
+  - "- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView"
+  - "- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale"
+  - "- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView"
+  :name: UIScrollViewDelegate
+UIActionSheetDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIModalViewDelegate_Protocol/UIActionSheetDelegate/UIActionSheetDelegate.html
+  :optional: 
+  - "- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex"
+  - "- (void)willPresentActionSheet:(UIActionSheet *)actionSheet"
+  - "- (void)didPresentActionSheet:(UIActionSheet *)actionSheet"
+  - "- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - "- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - "- (void)actionSheetCancel:(UIActionSheet *)actionSheet"
+  :name: UIActionSheetDelegate
+UIImagePickerControllerDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIImagePickerControllerDelegate_Protocol/UIImagePickerControllerDelegate/UIImagePickerControllerDelegate.html
+  :optional: 
+  - "- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo"
+  - "- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker"
+  :name: UIImagePickerControllerDelegate
+ABNewPersonViewControllerDelegate: 
+  :required: 
+  - "- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABNewPersonViewControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: ABNewPersonViewControllerDelegate
+UITabBarDelegate: 
+  :required: 
+  - "- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITabBarDelegate_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (void)tabBar:(UITabBar *)tabBar willBeginCustomizingItems:(NSArray *)items"
+  - "- (void)tabBar:(UITabBar *)tabBar didBeginCustomizingItems:(NSArray *)items"
+  - "- (void)tabBar:(UITabBar *)tabBar willEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
+  - "- (void)tabBar:(UITabBar *)tabBar didEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
+  :name: UITabBarDelegate
+UIPickerViewDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIPickerViewDelegate_Protocol/Reference/UIPickerViewDelegate.html
+  :optional: 
+  - 
+  - "- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component"
+  - "- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component"
+  - "- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view"
+  - "- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component"
+  :name: UIPickerViewDelegate
+UINavigationBarDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UINavigationBarDelegate_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item"
+  - "- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item"
+  - "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item"
+  - "- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item"
+  :name: UINavigationBarDelegate
+UITextInputTraits: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html
+  :optional: 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  :name: UITextInputTraits
+UITextFieldDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextFieldDelegate_Protocol/UITextFieldDelegate/UITextFieldDelegate.html
+  :optional: 
+  - "- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField"
+  - "- (void)textFieldDidBeginEditing:(UITextField *)textField"
+  - "- (BOOL)textFieldShouldEndEditing:(UITextField *)textField"
+  - "- (void)textFieldDidEndEditing:(UITextField *)textField"
+  - "- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string"
+  - "- (BOOL)textFieldShouldClear:(UITextField *)textField"
+  - "- (BOOL)textFieldShouldReturn:(UITextField *)textField"
+  :name: UITextFieldDelegate
+UITableViewDelegate: 
+  :required: 
+  - "- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITableViewDelegate_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath"
+  - "- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath"
+  - "- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section"
+  - "- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section"
+  - "- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section"
+  - "- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section"
+  - "- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath"
+  :name: UITableViewDelegate
+UITableViewDataSource: 
+  :required: 
+  - "- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView"
+  - "- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView"
+  - "- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index"
+  - "- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section"
+  - "- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section"
+  - "- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath"
+  - "- (void)tableView:(UITableView *)tableView  moveRowAtIndexPath:(NSIndexPath *)fromIndexPath  toIndexPath:(NSIndexPath *)toIndexPath"
+  :name: UITableViewDataSource
+ABUnknownPersonViewControllerDelegate: 
+  :required: 
+  - "- (void)unknownPersonViewController:(ABUnknownPersonViewController *)unknownPersonView didResolveToPerson:(ABRecordRef)person"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABUnknownPersonViewControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: ABUnknownPersonViewControllerDelegate
+UINavigationControllerDelegate: 
+  :required: 
+  - "- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
+  - "- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UINavigationControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: UINavigationControllerDelegate
+CLLocationManagerDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html
+  :optional: 
+  - "- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation"
+  - "- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error"
+  :name: CLLocationManagerDelegate
+UIWebViewDelegate: 
+  :required: []
+
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html
+  :optional: 
+  - "- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType"
+  - "- (void)webViewDidStartLoad:(UIWebView *)webView"
+  - "- (void)webViewDidFinishLoad:(UIWebView *)webView"
+  - "- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error"
+  :name: UIWebViewDelegate
+UISearchBarDelegate: 
+  :required: 
+  - "- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText"
+  - "- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar"
+  - "- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar"
+  - "- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar"
+  - "- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar"
+  - "- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar"
+  - "- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar"
+  - "- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: UISearchBarDelegate
+ABPersonViewControllerDelegate: 
+  :required: 
+  - "- (BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifierForValue"
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABPersonViewControllerDelegate_Protocol/Reference/Reference.html
+  :optional: []
+
+  :name: ABPersonViewControllerDelegate

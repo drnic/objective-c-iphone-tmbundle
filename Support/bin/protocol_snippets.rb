@@ -50,34 +50,7 @@ class ProtocolSnippet
   
   def self.protocol_definitions
     @protocol_definitions ||= begin
-      doc_root = "/Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation"
-      protocol_docs = Dir[doc_root + "/*/Reference/*_Protocol/*/*.html"]
-      protocol_docs.inject({}) do |docs, path|
-        doc = Hpricot(open(path))
-        name       = doc.search("h1").inner_html.gsub(/\s+Protocol Reference/, "")
-        next docs if name == "Index" || name.index(" ")
-        method_interfaces = doc.search("p.spaceabovemethod").map { |method| method.inner_html.gsub(/<[^>]*>/,'') }
-        compact_methods = method_interfaces.inject({}) do |mem, method|
-          compact = method.gsub(/\([^)]+\)/,'').scan(/\w+\:/).join # TODO - only methods with args, no properties or no-arg methods
-          mem[compact] = method
-          mem
-        end
-        required   = []
-        optional   = []
-        method_index = doc.search("li.tooltip span")
-        method_index.each do |method|
-          compact_name = method.search("code a").inner_html.gsub("&#8211;", "").gsub("&#xA0;", "")
-          next if compact_name.length == 0
-          full_spec   = compact_methods[compact_name]
-          if method.search("span.task_api_suffix").size == 0
-            required << full_spec
-          else
-            optional << full_spec
-          end
-        end
-        docs[name] = { :name => name, :path => path, :required => required, :optional => optional }
-        docs
-      end
+      YAML.load(open(File.dirname(__FILE__) + "/../protocols.yml", "r"))
     end
   end
 end
@@ -88,8 +61,6 @@ if __FILE__ == $0
   require "rubygems"
   gem 'hpricot'
   require "hpricot"
-  gem "htmlentities"
-  require "htmlentities"
   protocols = ProtocolSnippet.protocol_definitions
   TextMate.exit_discard unless protocol_class = TextMate::UI.menu(protocols.map { |item| {"title" => item} })
   protocol_class = protocol_class["title"]
