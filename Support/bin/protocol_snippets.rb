@@ -1,6 +1,7 @@
 class ProtocolSnippetNotSupported < Exception; end
 
 require "yaml"
+require "ui"
 
 class ProtocolSnippet
   attr_reader :protocol_class
@@ -46,11 +47,16 @@ class ProtocolSnippet
       YAML.load(File.read(file))
     end
   end
+  
+  def self.protocol_definitions
+    Dir[File.dirname(__FILE__) + "/protocols/*.yml"].map { |file| File.basename(file).gsub(/\.yml$/,'') }
+  end
 end
 
 if __FILE__ == $0
   require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
-
-  puts "TODO - implement ProtocolSnippet"
-  TextMate.exit_discard
+  protocols = ProtocolSnippet.protocol_definitions
+  TextMate.exit_discard unless protocol_class = TextMate::UI.menu(:title => "Select protocol class", :items => protocols)
+  
+  puts ProtocolSnippet.new(protocol_class).to_s
 end
