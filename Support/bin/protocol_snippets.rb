@@ -85,6 +85,7 @@ end
 if __FILE__ == $0
   require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
   # TODO - useful alert + exit_discard if no hpricot
+  require "rubygems"
   gem 'hpricot'
   require "hpricot"
   gem "htmlentities"
