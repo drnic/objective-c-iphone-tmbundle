@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + "/test_helper"
 
-require "delegate_protocol_snippets"
+require "protocol_snippets"
 
-class TestDelegateProtocolSnippets < Test::Unit::TestCase
+class TestProtocolSnippets < Test::Unit::TestCase
   context "for UITableView" do
     setup do
       @delegate_for = "UITableView"
@@ -45,7 +45,7 @@ class TestDelegateProtocolSnippets < Test::Unit::TestCase
 // – tableView:didEndEditingRowAtIndexPath:
 // – tableView:editingStyleForRowAtIndexPath:
       OBJC
-      assert_equal(expected, DelegateProtocolSnippet.for("UITableView", "UITableViewDelegate"))
+      assert_equal(expected, ProtocolSnippet.for("UITableViewDelegate"))
     end
 
     should "generate UITableView data source protocol" do
@@ -77,7 +77,7 @@ class TestDelegateProtocolSnippets < Test::Unit::TestCase
 // – tableView:canMoveRowAtIndexPath:  optional method  
 // – tableView:moveRowAtIndexPath:toIndexPath:  optional method
       OBJC
-      assert_equal(expected, DelegateProtocolSnippet.for("UITableView", "UITableViewDataSource"))
+      assert_equal(expected, ProtocolSnippet.for("UITableViewDataSource"))
     end
   end
 end

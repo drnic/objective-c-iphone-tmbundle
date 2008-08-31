@@ -12,9 +12,9 @@
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^~@d</string>
+	<string>^~@p</string>
 	<key>name</key>
-	<string>Delegate protocol methods</string>
+	<string>Protocol methods</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>
