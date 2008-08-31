@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>m</string>
+		<string>h</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>(?x)
+		 /\*\*(?!\*)
+		|^(?![^{]*?//|[^{]*?/\*(?!.*?\*/.*?\{)).*?\{\s*($|//|/\*(?!.*?\*/.*\S))
+		|^@(interface|protocol|implementation)\b
+	</string>
+	<key>foldingStopMarker</key>
+	<string>(?&lt;!\*)\*\*/|^\s*\}|^@end\b</string>
+	<key>keyEquivalent</key>
+	<string>^~O</string>
+	<key>name</key>
+	<string>Objective-C (iPhone)</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.objc</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.objc.iphone</string>
+	<key>uuid</key>
+	<string>F4023811-47D8-4F86-BDD4-B65576D4E2F8</string>
+</dict>
+</plist>
