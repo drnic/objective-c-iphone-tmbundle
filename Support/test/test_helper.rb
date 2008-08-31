@@ -11,5 +11,9 @@ gem "Shoulda"
 require "Shoulda"
 gem "mocha"
 require "mocha"
+gem 'hpricot'
+require "hpricot"
+gem "htmlentities"
+require "htmlentities"
 
 Context = Thoughtbot::Shoulda::Context unless Object.const_defined?("Context")

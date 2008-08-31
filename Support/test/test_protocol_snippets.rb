@@ -46,6 +46,10 @@ class TestProtocolSnippets < Test::Unit::TestCase
   end
   
   should "have UITableViewDelegate as available protocol" do
-    assert(ProtocolSnippet.protocol_definitions.include?("UITableViewDelegate"))
+    assert(ProtocolSnippet.protocol_definitions["UITableViewDelegate"])
+  end
+  
+  should "have 24 protocol specs for iPhone2.0 & XCode 3.1" do
+    assert_equal(24, ProtocolSnippet.protocol_definitions.keys.size, "Only found protocols: #{ProtocolSnippet.protocol_definitions.values.inspect}")
   end
 end
