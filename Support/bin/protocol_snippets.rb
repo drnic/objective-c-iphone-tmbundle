@@ -1,11 +1,24 @@
 class ProtocolSnippet
-  def self.for(protocol_class)
-    
+  attr_reader :protocol_class
+  
+  def initialize(protocol_class)
+    @protocol_class = protocol_class
   end
   
-  def self.supported_delegate_protocol_class?(protocol_class)
+  def self.supported?
     available = %w[UITableViewDelegate UITableViewDataSource]
     available.include?(protocol_class)
+  end
+  
+  def to_s
+    header
+  end
+  
+  def header
+    <<-OBJC
+#pragma mark -
+#pragma mark - #{@protocol_class} methods
+    OBJC
   end
 end
 

@@ -45,7 +45,7 @@ class TestProtocolSnippets < Test::Unit::TestCase
 // – tableView:didEndEditingRowAtIndexPath:
 // – tableView:editingStyleForRowAtIndexPath:
       OBJC
-      assert_equal(expected, ProtocolSnippet.for("UITableViewDelegate"))
+      assert_equal(expected, ProtocolSnippet.new("UITableViewDelegate").to_s)
     end
 
     should "generate UITableView data source protocol" do
@@ -60,22 +60,22 @@ class TestProtocolSnippets < Test::Unit::TestCase
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  
+
 }
 
 // Optional UITableViewDataSource methods
 // Configuring a Table View
-// – numberOfSectionsInTableView:  optional method  
-// – sectionIndexTitlesForTableView:  optional method  
-// – tableView:sectionForSectionIndexTitle:atIndex:  optional method  
-// – tableView:titleForHeaderInSection:  optional method  
-// – tableView:titleForFooterInSection:  optional method  
+// – numberOfSectionsInTableView:
+// – sectionIndexTitlesForTableView:
+// – tableView:sectionForSectionIndexTitle:atIndex:
+// – tableView:titleForHeaderInSection:
+// – tableView:titleForFooterInSection:
 // Inserting or Deleting Table Rows
-// – tableView:commitEditingStyle:forRowAtIndexPath:  optional method  
-// – tableView:canEditRowAtIndexPath:  optional method  
+// – tableView:commitEditingStyle:forRowAtIndexPath:
+// – tableView:canEditRowAtIndexPath:
 // Reordering Table Rows
-// – tableView:canMoveRowAtIndexPath:  optional method  
-// – tableView:moveRowAtIndexPath:toIndexPath:  optional method
+// – tableView:canMoveRowAtIndexPath:
+// – tableView:moveRowAtIndexPath:toIndexPath:
       OBJC
       assert_equal(expected, ProtocolSnippet.for("UITableViewDataSource"))
     end
