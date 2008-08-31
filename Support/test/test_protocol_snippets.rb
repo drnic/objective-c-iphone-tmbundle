@@ -8,17 +8,22 @@ class TestProtocolSnippets < Test::Unit::TestCase
 #pragma mark -
 #pragma mark - UITableViewDelegate methods
 
+// Asks the delegate whether the background of the specified row should be indented while the table view is in editing mode.
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
   $0
 }
 
+// Asks the delegate to return a new index path to retarget a proposed move of a row.
 - (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
 {
   
 }
     OBJC
-    assert(ProtocolSnippet.new("UITableViewDelegate").to_s.index(expected))
+    expected = expected.split("\n")
+    actual = ProtocolSnippet.new("UITableViewDelegate").to_s.split("\n")[0..expected.length-1]
+    assert_equal(expected, actual,
+      "Not matching; generated snippet:\n#{actual}")
   end
 
   should "generate UITableView data source protocol" do
@@ -26,17 +31,22 @@ class TestProtocolSnippets < Test::Unit::TestCase
 #pragma mark -
 #pragma mark - UITableViewDataSource methods
 
+// Asks the data source for a cell to insert in a particular location of the table view.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   $0
 }
 
+// Tells the data source to return the number of rows in a given section of a table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   
 }
     OBJC
-    assert(ProtocolSnippet.new("UITableViewDataSource").to_s.index(expected))
+    expected = expected.split("\n")
+    actual = ProtocolSnippet.new("UITableViewDataSource").to_s.split("\n")[0..expected.length-1]
+    assert_equal(expected, actual,
+      "Not matching; generated snippet:\n#{actual}")
   end
   
   should "not work for unknown protocol" do

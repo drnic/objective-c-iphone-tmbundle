@@ -1,265 +1,385 @@
 --- 
 UIAlertViewDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIAlertViewDelegate_Protocol/UIAlertViewDelegate/UIAlertViewDelegate.html
-  :optional: 
-  - "- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex"
-  - "- (void)willPresentAlertView:(UIAlertView *)alertView"
-  - "- (void)didPresentAlertView:(UIAlertView *)alertView"
-  - "- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex"
-  - "- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex"
-  - "- (void)alertViewCancel:(UIAlertView *)alertView"
   :name: UIAlertViewDelegate
+  :required: []
+
+  :optional: 
+  - :description: Sent to the delegate when the user clicks a button on an alert view. This method is optional.
+    :name: "- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate before a model view is presented to the user. This method is optional.
+    :name: "- (void)willPresentAlertView:(UIAlertView *)alertView"
+  - :description: Sent to the delegate after an alert view is presented to the user. This method is optional.
+    :name: "- (void)didPresentAlertView:(UIAlertView *)alertView"
+  - :description: Sent to the delegate before an alert view is dismissed. This method is optional.
+    :name: "- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate after an alert view is dismissed from the screen. This method is optional.
+    :name: "- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate before an alert view is canceled. This method is optional.
+    :name: "- (void)alertViewCancel:(UIAlertView *)alertView"
 UIAccelerometerDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIAccelerometerDelegate_Protocol/UIAccelerometerDelegate/UIAccelerometerDelegate.html
-  :optional: 
-  - "- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration"
   :name: UIAccelerometerDelegate
+  :required: []
+
+  :optional: 
+  - :description: Delivers the latest acceleration data to the delegate. This method is optional.
+    :name: "- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration"
 UITabBarControllerDelegate: 
-  :required: 
-  - "- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController"
-  - "- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITabBarControllerDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: UITabBarControllerDelegate
+  :required: 
+  - :description: Sent to the delegate after a view controller is selected.
+    :name: "- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController"
+  - :description: Sent to the delegate after the customizing sheet is dismissed.
+    :name: "- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed"
+  :optional: []
+
 UIApplicationDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/Reference/Reference.html
-  :optional: 
-  - "- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url"
-  - "- (void)application:(UIApplication *)application  willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation  duration:(NSTimeInterval)duration"
-  - "- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation"
-  - "- (void)applicationWillResignActive:(UIApplication *)application"
-  - "- (void)applicationDidBecomeActive:(UIApplication *)application"
-  - "- (void)application:(UIApplication *)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame"
-  - "- (void)application:(UIApplication *)application didChangeStatusBarFrame:(CGRect)oldStatusBarFrame"
-  - "- (void)applicationDidFinishLaunching:(UIApplication *)application"
-  - "- (void)applicationWillTerminate:(UIApplication *)application"
-  - "- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application"
-  - "- (void)applicationSignificantTimeChange:(UIApplication *)application"
   :name: UIApplicationDelegate
+  :required: []
+
+  :optional: 
+  - :description: Asks the delegate to open a resource identified by URL. This method is optional.
+    :name: "- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url"
+  - :description: Tells the delegate when the interface orientation of the status bar is about to change. This method is optional.
+    :name: "- (void)application:(UIApplication *)application  willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation  duration:(NSTimeInterval)duration"
+  - :description: Tells the delegate when the interface orientation of the status bar has changed. This method is optional.
+    :name: "- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation"
+  - :description: Tells the delegate that the application will become inactive. This method is optional.
+    :name: "- (void)applicationWillResignActive:(UIApplication *)application"
+  - :description: Tells the delegate that the application has become active. This method is optional.
+    :name: "- (void)applicationDidBecomeActive:(UIApplication *)application"
+  - :description: Tells the delegate when the frame of the status bar is about to change. This method is optional.
+    :name: "- (void)application:(UIApplication *)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame"
+  - :description: Tells the delegate when the frame of the status bar has changed. This method is optional.
+    :name: "- (void)application:(UIApplication *)application didChangeStatusBarFrame:(CGRect)oldStatusBarFrame"
+  - :description: Tells the delegate when the application has finished launching. This method is optional.
+    :name: "- (void)applicationDidFinishLaunching:(UIApplication *)application"
+  - :description: Tells the delegate when the application is about to terminate. This method is optional.
+    :name: "- (void)applicationWillTerminate:(UIApplication *)application"
+  - :description: Tells the delegate when the application receives a memory warning from the system. This method is optional.
+    :name: "- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application"
+  - :description: Tells the delegate when there is a significant change in the time. This method is optional.
+    :name: "- (void)applicationSignificantTimeChange:(UIApplication *)application"
 UIPickerViewDataSource: 
-  :required: 
-  - "- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView"
-  - "- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Reference/UIPickerViewDataSource_Protocol/Introduction/Introduction.html
-  :optional: []
-
   :name: UIPickerViewDataSource
+  :required: 
+  - :description: Asks the data source to return the number of components in the given picker view.
+    :name: "- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView"
+  - :description: Asks the data source to return the number of rows in the given component.
+    :name: "- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component"
+  :optional: []
+
 ABPeoplePickerNavigationControllerDelegate: 
-  :required: 
-  - "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person"
-  - "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier"
-  - "- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABPeoplePickerNavigationControllerDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: ABPeoplePickerNavigationControllerDelegate
+  :required: 
+  - :description: Sent when the user selects a contact.
+    :name: "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person"
+  - :description: "Sent when the user selects one of a person\xE2\x80\x99s properties."
+    :name: "- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier"
+  - :description: Sent when the user taps Cancel.
+    :name: "- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;"
+  :optional: []
+
 UITextViewDelegate: 
-  :required: 
-  - "- (BOOL)textViewShouldEndEditing:(UITextView *)textView"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextViewDelegate_Protocol/Reference/UITextViewDelegate.html
-  :optional: 
-  - "- (BOOL)textViewShouldBeginEditing:(UITextView *)textView"
-  - "- (void)textViewDidBeginEditing:(UITextView *)textView"
-  - "- (void)textViewDidEndEditing:(UITextView *)textView"
-  - "- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text"
-  - "- (void)textViewDidChange:(UITextView *)textView"
-  - "- (void)textViewDidChangeSelection:(UITextView *)textView"
   :name: UITextViewDelegate
+  :required: 
+  - :description: "Asks the delegate if editing should stop in the specified text view. "
+    :name: "- (BOOL)textViewShouldEndEditing:(UITextView *)textView"
+  :optional: 
+  - :description: Asks the delegate if editing should begin in the specified text view. This method is optional.
+    :name: "- (BOOL)textViewShouldBeginEditing:(UITextView *)textView"
+  - :description: Tells the delegate that editing of the specified text view has begun. This method is optional.
+    :name: "- (void)textViewDidBeginEditing:(UITextView *)textView"
+  - :description: Tells the delegate that editing of the specified text view has ended. This method is optional.
+    :name: "- (void)textViewDidEndEditing:(UITextView *)textView"
+  - :description: Asks the delegate whether the specified text should be replaced in the text view. This method is optional.
+    :name: "- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text"
+  - :description: Tells the delegate that the text or attributes in the specified text view changed. This method is optional.
+    :name: "- (void)textViewDidChange:(UITextView *)textView"
+  - :description: Tells the delegate that the text selection changed in the specified text view. This method is optional.
+    :name: "- (void)textViewDidChangeSelection:(UITextView *)textView"
 UIScrollViewDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIScrollViewDelegate_Protocol/Reference/UIScrollViewDelegate.html
-  :optional: 
-  - "- (void)scrollViewDidScroll:(UIScrollView *)scrollView"
-  - "- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView"
-  - "- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate"
-  - "- (BOOL)scrollViewWillScrollToTop:(UIScrollView *)scrollView"
-  - "- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView"
-  - "- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView"
-  - "- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView"
-  - "- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView"
-  - "- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale"
-  - "- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView"
   :name: UIScrollViewDelegate
+  :required: []
+
+  :optional: 
+  - :description: Tells the delegate when the user scrolls the content view within the receiver. This method is optional.
+    :name: "- (void)scrollViewDidScroll:(UIScrollView *)scrollView"
+  - :description: Tells the delegate when the scroll view is about to start scrolling the content. This method is optional.
+    :name: "- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView"
+  - :description: Tells the delegate when dragging ended in the scroll view. This method is optional.
+    :name: "- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate"
+  - :description: Asks the delegate if the scroll view should scroll to the top of the content. This method is optional.
+    :name: "- (BOOL)scrollViewWillScrollToTop:(UIScrollView *)scrollView"
+  - :description: Tells the delegate that the scroll view scrolled to the top of the content. This method is optional.
+    :name: "- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView"
+  - :description: Tells the delegate that the scroll view is starting to decelerate the scrolling movement. This method is optional.
+    :name: "- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView"
+  - :description: Tells the delegate that the scroll view has ended decelerating the scrolling movement. This method is optional.
+    :name: "- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView"
+  - :description: Asks the delegate for the view to scale when zooming is about to occur in the scroll view. This method is optional.
+    :name: "- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView"
+  - :description: Tells the delegate when zooming of the content in the scroll view completed. This method is optional.
+    :name: "- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale"
+  - :description: Tells the delegate when a scrolling animation in the scroll view concludes. This method is optional.
+    :name: "- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView"
 UIActionSheetDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIModalViewDelegate_Protocol/UIActionSheetDelegate/UIActionSheetDelegate.html
-  :optional: 
-  - "- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex"
-  - "- (void)willPresentActionSheet:(UIActionSheet *)actionSheet"
-  - "- (void)didPresentActionSheet:(UIActionSheet *)actionSheet"
-  - "- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex"
-  - "- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex"
-  - "- (void)actionSheetCancel:(UIActionSheet *)actionSheet"
   :name: UIActionSheetDelegate
+  :required: []
+
+  :optional: 
+  - :description: Sent to the delegate when the user clicks a button on an action sheet. This method is optional.
+    :name: "- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate before an action sheet is presented to the user. This method is optional.
+    :name: "- (void)willPresentActionSheet:(UIActionSheet *)actionSheet"
+  - :description: Sent to the delegate after an action sheet is presented to the user. This method is optional.
+    :name: "- (void)didPresentActionSheet:(UIActionSheet *)actionSheet"
+  - :description: Sent to the delegate before an action sheet is dismissed. This method is optional.
+    :name: "- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate after an action sheet is dismissed from the screen. This method is optional.
+    :name: "- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex"
+  - :description: Sent to the delegate before an action sheet is canceled. This method is optional.
+    :name: "- (void)actionSheetCancel:(UIActionSheet *)actionSheet"
 UIImagePickerControllerDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIImagePickerControllerDelegate_Protocol/UIImagePickerControllerDelegate/UIImagePickerControllerDelegate.html
-  :optional: 
-  - "- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo"
-  - "- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker"
   :name: UIImagePickerControllerDelegate
+  :required: []
+
+  :optional: 
+  - :description: These strings identify the possible keys in the editing information dictionary passed to the delegate.
+    :name: "- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo"
+  - :description: |-
+      <pre>
+      UIKIT_EXTERN <a href="../../../../Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSString" target="_top">NSString</a> *const UIImagePickerControllerOriginalImage;
+      UIKIT_EXTERN <a href="../../../../Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSString" target="_top">NSString</a> *const UIImagePickerControllerCropRect;
+      </pre>
+    :name: "- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker"
 ABNewPersonViewControllerDelegate: 
-  :required: 
-  - "- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABNewPersonViewControllerDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: ABNewPersonViewControllerDelegate
+  :required: 
+  - :description: Sent when the user taps Save or Cancel. If the user tapped Save, the current address book has been saved to the Address Book database.
+    :name: "- (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person"
+  :optional: []
+
 UITabBarDelegate: 
-  :required: 
-  - "- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITabBarDelegate_Protocol/Reference/Reference.html
-  :optional: 
-  - "- (void)tabBar:(UITabBar *)tabBar willBeginCustomizingItems:(NSArray *)items"
-  - "- (void)tabBar:(UITabBar *)tabBar didBeginCustomizingItems:(NSArray *)items"
-  - "- (void)tabBar:(UITabBar *)tabBar willEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
-  - "- (void)tabBar:(UITabBar *)tabBar didEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
   :name: UITabBarDelegate
+  :required: 
+  - :description: Sent to the delegate when the user selects a tab bar item.
+    :name: "- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item"
+  :optional: 
+  - :description: Sent to the delegate before the customizing modal view is displayed. This method is optional.
+    :name: "- (void)tabBar:(UITabBar *)tabBar willBeginCustomizingItems:(NSArray *)items"
+  - :description: Sent to the delegate after the customizing modal view is displayed. This method is optional.
+    :name: "- (void)tabBar:(UITabBar *)tabBar didBeginCustomizingItems:(NSArray *)items"
+  - :description: Sent to the delegate before the customizing modal view is dismissed. This method is optional.
+    :name: "- (void)tabBar:(UITabBar *)tabBar willEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
+  - :description: Sent to the delegate after the customizing modal view is dismissed. This method is optional.
+    :name: "- (void)tabBar:(UITabBar *)tabBar didEndCustomizingItems:(NSArray *)items changed:(BOOL)changed"
 UIPickerViewDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIPickerViewDelegate_Protocol/Reference/UIPickerViewDelegate.html
-  :optional: 
-  - 
-  - "- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component"
-  - "- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component"
-  - "- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view"
-  - "- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component"
   :name: UIPickerViewDelegate
+  :required: []
+
+  :optional: 
+  - 
+  - :description: Asks the delegate to return the row width to use for drawing row content. This method is optional.
+    :name: "- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component"
+  - :description: Asks the delegate to return the title to use for a given row in a given component. This method is optional.
+    :name: "- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component"
+  - :description: Asks the delegate to return the view to use for a given row in a given component. This method is optional.
+    :name: "- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view"
+  - :description: Asks the delegate to respond to the user selecting a specific row in a component of a picker view. This method is optional.
+    :name: "- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component"
 UINavigationBarDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UINavigationBarDelegate_Protocol/Reference/Reference.html
-  :optional: 
-  - "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item"
-  - "- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item"
-  - "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item"
-  - "- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item"
   :name: UINavigationBarDelegate
+  :required: []
+
+  :optional: 
+  - :description: Returns a Boolean value indicating whether the navigation bar should push an item. This method is optional.
+    :name: "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item"
+  - :description: Tells the delegate that an item was pushed onto the navigation bar. This method is optional.
+    :name: "- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item"
+  - :description: Returns a Boolean value indicating whether the navigation bar should pop an item. This method is optional.
+    :name: "- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item"
+  - :description: Tells the delegate that an item was popped from the navigation bar. This method is optional.
+    :name: "- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item"
 UITextInputTraits: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html
-  :optional: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   :name: UITextInputTraits
+  :required: []
+
+  :optional: 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 UITextFieldDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITextFieldDelegate_Protocol/UITextFieldDelegate/UITextFieldDelegate.html
-  :optional: 
-  - "- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField"
-  - "- (void)textFieldDidBeginEditing:(UITextField *)textField"
-  - "- (BOOL)textFieldShouldEndEditing:(UITextField *)textField"
-  - "- (void)textFieldDidEndEditing:(UITextField *)textField"
-  - "- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string"
-  - "- (BOOL)textFieldShouldClear:(UITextField *)textField"
-  - "- (BOOL)textFieldShouldReturn:(UITextField *)textField"
   :name: UITextFieldDelegate
+  :required: []
+
+  :optional: 
+  - :description: Asks the delegate if editing should begin in the specified text field. This method is optional.
+    :name: "- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField"
+  - :description: Tells the delegate that editing began for the specified text field. This method is optional.
+    :name: "- (void)textFieldDidBeginEditing:(UITextField *)textField"
+  - :description: Asks the delegate if editing should stop in the specified text field. This method is optional.
+    :name: "- (BOOL)textFieldShouldEndEditing:(UITextField *)textField"
+  - :description: Tells the delegate that editing stopped for the specified text field. This method is optional.
+    :name: "- (void)textFieldDidEndEditing:(UITextField *)textField"
+  - :description: Asks the delegate if the specified text should be changed. This method is optional.
+    :name: "- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string"
+  - :description: "Asks the delegate if the text field\xE2\x80\x99s current contents should be removed. This method is optional."
+    :name: "- (BOOL)textFieldShouldClear:(UITextField *)textField"
+  - :description: Asks the delegate if the text field should process the pressing of the return button. This method is optional.
+    :name: "- (BOOL)textFieldShouldReturn:(UITextField *)textField"
 UITableViewDelegate: 
-  :required: 
-  - "- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITableViewDelegate_Protocol/Reference/Reference.html
-  :optional: 
-  - "- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath"
-  - "- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath"
-  - "- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section"
-  - "- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section"
-  - "- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section"
-  - "- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section"
-  - "- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath"
   :name: UITableViewDelegate
+  :required: 
+  - :description: Asks the delegate whether the background of the specified row should be indented while the table view is in editing mode.
+    :name: "- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the delegate to return a new index path to retarget a proposed move of a row.
+    :name: "- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath"
+  :optional: 
+  - :description: Asks the delegate for the height to use for a row in a specified location. This method is optional.
+    :name: "- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the delegate to return the level of indentation for a row in a given section. This method is optional.
+    :name: "- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the delegate the table view is about to draw a cell for a particular row. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the delegate for the type of standard accessory view to use as a disclosure control for the specified row. This method is optional.
+    :name: "- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the delegate that the user tapped the accessory (disclosure) view associated with a given row. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the delegate that a specified row is about to be selected. This method is optional.
+    :name: "- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the delegate that the specified row is now selected. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the delegate for a view object to display in the header of the specified section of the table view. This method is optional.
+    :name: "- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section"
+  - :description: Asks the delegate for a view object to display in the footer of the specified section of the table view. This method is optional.
+    :name: "- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section"
+  - :description: Asks the delegate for the height to use for the header of a particular section. This method is optional.
+    :name: "- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section"
+  - :description: Asks the delegate for the height to use for the footer of a particular section. This method is optional.
+    :name: "- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section"
+  - :description: Tells the delegate that the table view is about to go into editing mode. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the delegate that the table view has left editing mode. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the delegate for the editing style of a row at a particular location in a table view. This method is optional.
+    :name: "- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath"
 UITableViewDataSource: 
-  :required: 
-  - "- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITableViewDataSource_Protocol/Reference/Reference.html
-  :optional: 
-  - "- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView"
-  - "- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView"
-  - "- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index"
-  - "- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section"
-  - "- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section"
-  - "- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath"
-  - "- (void)tableView:(UITableView *)tableView  moveRowAtIndexPath:(NSIndexPath *)fromIndexPath  toIndexPath:(NSIndexPath *)toIndexPath"
   :name: UITableViewDataSource
+  :required: 
+  - :description: Asks the data source for a cell to insert in a particular location of the table view.
+    :name: "- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the data source to return the number of rows in a given section of a table view.
+    :name: "- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section"
+  :optional: 
+  - :description: Asks the data source to return the number of sections in the table view. This method is optional.
+    :name: "- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView"
+  - :description: Asks the data source to return the titles for the sections for a table view. This method is optional.
+    :name: "- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView"
+  - :description: Asks the data source to return the index of the section having the given title and section title index. This method is optional.
+    :name: "- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index"
+  - :description: Asks the data source for the title of the header of the specified section of the table view. This method is optional.
+    :name: "- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section"
+  - :description: Asks the data source for the title of the footer of the specified section of the table view. This method is optional.
+    :name: "- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section"
+  - :description: Asks the data source to commit the insertion or deletion of a specified row in the receiver. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the data source to verify that the given row is editable. This method is optional.
+    :name: "- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Asks the data source whether a given row can be moved to another location in the table view. This method is optional.
+    :name: "- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath"
+  - :description: Tells the data source to move a row at a specific location in the table view to another location. This method is optional.
+    :name: "- (void)tableView:(UITableView *)tableView  moveRowAtIndexPath:(NSIndexPath *)fromIndexPath  toIndexPath:(NSIndexPath *)toIndexPath"
 ABUnknownPersonViewControllerDelegate: 
-  :required: 
-  - "- (void)unknownPersonViewController:(ABUnknownPersonViewController *)unknownPersonView didResolveToPerson:(ABRecordRef)person"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABUnknownPersonViewControllerDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: ABUnknownPersonViewControllerDelegate
+  :required: 
+  - :description: Sent when the user finishes creating a contact or adding the displayed person properties to an existing contact.
+    :name: "- (void)unknownPersonViewController:(ABUnknownPersonViewController *)unknownPersonView didResolveToPerson:(ABRecordRef)person"
+  :optional: []
+
 UINavigationControllerDelegate: 
-  :required: 
-  - "- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
-  - "- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UINavigationControllerDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: UINavigationControllerDelegate
+  :required: 
+  - :description: "Sent to the receiver just before the navigation controller displays a view controller\xE2\x80\x99s view and navigation item properties."
+    :name: "- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
+  - :description: "Sent to the receiver just after the navigation controller displays a view controller\xE2\x80\x99s view and navigation item properties."
+    :name: "- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated"
+  :optional: []
+
 CLLocationManagerDelegate: 
-  :required: []
-
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/CoreLocation/Reference/CLLocationManagerDelegate_Protocol/CLLocationManagerDelegate/CLLocationManagerDelegate.html
-  :optional: 
-  - "- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation"
-  - "- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error"
   :name: CLLocationManagerDelegate
-UIWebViewDelegate: 
   :required: []
 
-  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html
   :optional: 
-  - "- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType"
-  - "- (void)webViewDidStartLoad:(UIWebView *)webView"
-  - "- (void)webViewDidFinishLoad:(UIWebView *)webView"
-  - "- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error"
+  - :description: Tells the delegate that a new location value is available. This method is optional.
+    :name: "- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation"
+  - :description: Tells the delegate that the location manager was unable to retrieve a location value. This method is optional.
+    :name: "- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error"
+UIWebViewDelegate: 
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html
   :name: UIWebViewDelegate
+  :required: []
+
+  :optional: 
+  - :description: Sent before a web view begins loading content. This method is optional.
+    :name: "- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType"
+  - :description: Sent after a web view starts loading content. This method is optional.
+    :name: "- (void)webViewDidStartLoad:(UIWebView *)webView"
+  - :description: Sent after a web view finishes loading content. This method is optional.
+    :name: "- (void)webViewDidFinishLoad:(UIWebView *)webView"
+  - :description: Sent if a web view failed to load content. This method is optional.
+    :name: "- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error"
 UISearchBarDelegate: 
-  :required: 
-  - "- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText"
-  - "- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar"
-  - "- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar"
-  - "- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar"
-  - "- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar"
-  - "- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar"
-  - "- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar"
-  - "- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar"
   :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UISearchBarDelegate_Protocol/Reference/Reference.html
-  :optional: []
-
   :name: UISearchBarDelegate
-ABPersonViewControllerDelegate: 
   :required: 
-  - "- (BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifierForValue"
-  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABPersonViewControllerDelegate_Protocol/Reference/Reference.html
+  - :description: Sent to the delegate after the user changed the search text.
+    :name: "- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText"
+  - :description: Asks the delegate if editing should begin in the specified search bar.
+    :name: "- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar"
+  - :description: Sent to the delegate when the user begins editing the search text.
+    :name: "- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar"
+  - :description: "Asks the delegate if editing should stop in the specified search bar. "
+    :name: "- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar"
+  - :description: Sent to the delegate when the user finishes editing the search text.
+    :name: "- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar"
+  - :description: Sent to the delegate when the bookmark button is tapped.
+    :name: "- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar"
+  - :description: Sent to the delegate when the cancel button is tapped.
+    :name: "- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar"
+  - :description: Sent to the delegate when the search button is tapped.
+    :name: "- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar"
   :optional: []
 
+ABPersonViewControllerDelegate: 
+  :path: /Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/AddressBookUI/Reference/ABPersonViewControllerDelegate_Protocol/Reference/Reference.html
   :name: ABPersonViewControllerDelegate
+  :required: 
+  - :description: Sent when the user selects a property value of the person displayed in a person view controller.
+    :name: "- (BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifierForValue"
+  :optional: []
+

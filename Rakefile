@@ -25,14 +25,17 @@ task :scrape_protocols do
     doc = Hpricot(open(path))
     name       = doc.search("h1").inner_html.gsub(/\s+Protocol Reference/, "")
     next docs if name == "Index" || name.index(" ")
-    method_interfaces = doc.search("p.spaceabovemethod").map { |method| method.inner_html.gsub(/<[^>]*>/,'') }
-    compact_methods = method_interfaces.inject({}) do |mem, method|
-      compact = method.gsub(/\([^)]+\)/,'').scan(/\w+\:/).join # TODO - only methods with args, no properties or no-arg methods
-      mem[compact] = method
+    method_interfaces   = doc.search("p.spaceabovemethod").map { |method| method.inner_html.gsub(/<[^>]*>/,'') }
+    method_descriptions = doc.search("p.spaceabove").map { |desc| desc.inner_html }
+    method_descriptions = method_descriptions[(method_descriptions.size - method_interfaces.size)..-1]
+    compact_methods     = [method_interfaces, method_descriptions].transpose.inject({}) do |mem, method_and_description|
+      method, description = method_and_description
+      compact             = method.gsub(/\([^)]+\)/,'').scan(/\w+\:/).join # TODO - only methods with args, no properties or no-arg methods
+      mem[compact]        = { :name => method, :description => description }
       mem
     end
-    required   = []
-    optional   = []
+    required = []
+    optional = []
     method_index = doc.search("li.tooltip span")
     method_index.each do |method|
       compact_name = method.search("code a").inner_html.gsub("&#8211;", "").gsub("&#xA0;", "")
@@ -51,4 +54,5 @@ task :scrape_protocols do
   File.open(File.dirname(__FILE__) + "/Support/protocols.yml", "w") do |f|
     f << YAML.dump(protocol_definitions)
   end
+  puts "done"
 end

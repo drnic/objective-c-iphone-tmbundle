@@ -32,8 +32,11 @@ class ProtocolSnippet
   end
   
   def render_required_methods
-    protocol_definition[:required].inject([]) do |mem, method|
+    protocol_definition[:required].inject([]) do |mem, method_and_description|
+      method      = method_and_description[:name]
+      description = method_and_description[:description]
       mem << <<-OBJC
+// #{description}
 #{method}
 {
   #{"$0" if mem.size == 0}
@@ -44,8 +47,11 @@ class ProtocolSnippet
   end
   
   def render_optional_methods
-    protocol_definition[:optional].inject([]) do |mem, method|
+    protocol_definition[:optional].inject([]) do |mem, method_and_description|
+      method      = method_and_description[:name]
+      description = method_and_description[:description]
       mem << <<-OBJC
+// #{description}
 // #{method}
 // {
 //   
