@@ -7,7 +7,7 @@ class ProtocolSnippet
   attr_reader :protocol_class
   
   def initialize(protocol_class)
-    @protocol_class = protocol_class
+    @protocol_class = protocol_class.strip
     raise ProtocolSnippetNotSupported, protocol_class unless supported?
   end
   
@@ -49,14 +49,14 @@ class ProtocolSnippet
   end
   
   def self.protocol_definitions
-    Dir[File.dirname(__FILE__) + "/protocols/*.yml"].map { |file| File.basename(file).gsub(/\.yml$/,'') }
+    Dir[File.dirname(__FILE__) + "/../protocols/*.yml"].map { |file| File.basename(file).gsub(/\.yml$/,'') }
   end
 end
 
 if __FILE__ == $0
   require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
   protocols = ProtocolSnippet.protocol_definitions
-  TextMate.exit_discard unless protocol_class = TextMate::UI.menu(:title => "Select protocol class", :items => protocols)
-  
+  TextMate.exit_discard unless protocol_class = TextMate::UI.menu(protocols.map { |item| {"title" => item} })
+  protocol_class = protocol_class["title"]
   puts ProtocolSnippet.new(protocol_class).to_s
 end

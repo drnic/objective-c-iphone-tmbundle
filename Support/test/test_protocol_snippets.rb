@@ -3,13 +3,8 @@ require File.dirname(__FILE__) + "/test_helper"
 require "protocol_snippets"
 
 class TestProtocolSnippets < Test::Unit::TestCase
-  context "for UITableView" do
-    setup do
-      @delegate_for = "UITableView"
-    end
-
-    should "generate UITableView delegate protocol" do
-      expected = <<-OBJC
+  should "generate UITableView delegate protocol" do
+    expected = <<-OBJC
 #pragma mark -
 #pragma mark - UITableViewDelegate methods
 
@@ -22,12 +17,12 @@ class TestProtocolSnippets < Test::Unit::TestCase
 {
   
 }
-      OBJC
-      assert_equal(expected, ProtocolSnippet.new("UITableViewDelegate").to_s)
-    end
+    OBJC
+    assert_equal(expected, ProtocolSnippet.new("UITableViewDelegate").to_s)
+  end
 
-    should "generate UITableView data source protocol" do
-      expected = <<-OBJC
+  should "generate UITableView data source protocol" do
+    expected = <<-OBJC
 #pragma mark -
 #pragma mark - UITableViewDataSource methods
 
@@ -40,14 +35,17 @@ class TestProtocolSnippets < Test::Unit::TestCase
 {
   
 }
-      OBJC
-      assert_equal(expected, ProtocolSnippet.new("UITableViewDataSource").to_s)
+    OBJC
+    assert_equal(expected, ProtocolSnippet.new("UITableViewDataSource").to_s)
+  end
+  
+  should "not work for unknown protocol" do
+    assert_raise(ProtocolSnippetNotSupported) do
+      ProtocolSnippet.new("XYZ")
     end
-    
-    should "not work for unknown protocol" do
-      assert_raise(ProtocolSnippetNotSupported) do
-        ProtocolSnippet.new("XYZ")
-      end
-    end
+  end
+  
+  should "have UITableViewDelegate as available protocol" do
+    assert(ProtocolSnippet.protocol_definitions.include?("UITableViewDelegate"))
   end
 end
